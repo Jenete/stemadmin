@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Jenete/stemadmin.git/static/css/main.1c1fa91f.css",
-    "main.js": "/Jenete/stemadmin.git/static/js/main.228bd200.js",
-    "index.html": "/Jenete/stemadmin.git/index.html",
-    "main.1c1fa91f.css.map": "/Jenete/stemadmin.git/static/css/main.1c1fa91f.css.map",
-    "main.228bd200.js.map": "/Jenete/stemadmin.git/static/js/main.228bd200.js.map"
+    "main.css": "/Jenete/stemadmin/static/css/main.1c1fa91f.css",
+    "main.js": "/Jenete/stemadmin/static/js/main.d0686c92.js",
+    "index.html": "/Jenete/stemadmin/index.html",
+    "main.1c1fa91f.css.map": "/Jenete/stemadmin/static/css/main.1c1fa91f.css.map",
+    "main.d0686c92.js.map": "/Jenete/stemadmin/static/js/main.d0686c92.js.map"
   },
   "entrypoints": [
     "static/css/main.1c1fa91f.css",
-    "static/js/main.228bd200.js"
+    "static/js/main.d0686c92.js"
   ]
 }
