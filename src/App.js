@@ -8,14 +8,14 @@ function App() {
   const [students, setStudents] = useState([]);
   
   useEffect(() => {
-    // const ver = sessionStorage.getItem('verifieduser');
-    // if (!ver){
-    //    let inp = window.prompt("Enter key");
-    //   while(inp !== '0740243108'){
-    //     inp = window.prompt("Enter key");
-    //   }
-    // }
-    // sessionStorage.setItem('verifieduser',true);
+    const ver = sessionStorage.getItem('verifieduser');
+    if (!ver){
+       let inp = window.prompt("Enter key");
+      while(inp !== '0740243108'){
+        inp = window.prompt("Enter key");
+      }
+    }
+    sessionStorage.setItem('verifieduser',true);
     fetchRegisteredStudents();
   }, []);
 
