@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Jenete/stemadmin.git/static/css/main.1c1fa91f.css",
+    "main.js": "/Jenete/stemadmin.git/static/js/main.228bd200.js",
+    "index.html": "/Jenete/stemadmin.git/index.html",
+    "main.1c1fa91f.css.map": "/Jenete/stemadmin.git/static/css/main.1c1fa91f.css.map",
+    "main.228bd200.js.map": "/Jenete/stemadmin.git/static/js/main.228bd200.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c1fa91f.css",
+    "static/js/main.228bd200.js"
+  ]
+}
