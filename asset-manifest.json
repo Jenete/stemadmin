@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Jenete/stemadmin/static/css/main.1c1fa91f.css",
-    "main.js": "/Jenete/stemadmin/static/js/main.d0686c92.js",
+    "main.css": "/Jenete/stemadmin/static/css/main.d5fa9634.css",
+    "main.js": "/Jenete/stemadmin/static/js/main.f259970e.js",
     "index.html": "/Jenete/stemadmin/index.html",
-    "main.1c1fa91f.css.map": "/Jenete/stemadmin/static/css/main.1c1fa91f.css.map",
-    "main.d0686c92.js.map": "/Jenete/stemadmin/static/js/main.d0686c92.js.map"
+    "main.d5fa9634.css.map": "/Jenete/stemadmin/static/css/main.d5fa9634.css.map",
+    "main.f259970e.js.map": "/Jenete/stemadmin/static/js/main.f259970e.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c1fa91f.css",
-    "static/js/main.d0686c92.js"
+    "static/css/main.d5fa9634.css",
+    "static/js/main.f259970e.js"
   ]
 }
