@@ -14,12 +14,24 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
 const usersCollection = collection(db, "manualusers");
+const gtkCollection = collection(db, "gtkcollection");
 
 class FirebaseConfig {
     static async postUserData(userData) {
         try {
             userData = { ...userData, email: userData.cellnumber + '@' + userData.learnerName.replace(/\s/g, '') };
             const userRef = doc(usersCollection, userData.email);
+            await setDoc(userRef, userData);
+            return { success: true, message: "Successfully added a user" };
+        } catch (error) {
+            console.error('Error adding student: ', error);
+            return { success: false, message: 'Error adding student' };
+        }
+    }
+    static async postGTKData(userData) {
+        try {
+            userData = { ...userData, id: userData?.cellNumber + '@' + userData?.name.replace(/\s/g, '') };
+            const userRef = doc(gtkCollection, userData.id);
             await setDoc(userRef, userData);
             return { success: true, message: "Successfully added a user" };
         } catch (error) {
@@ -47,6 +59,15 @@ class FirebaseConfig {
     static async getAllUsers() {
         try {
             const querySnapshot = await getDocs(usersCollection);
+            return querySnapshot.docs.map((doc) => doc.data());
+        } catch (error) {
+            console.error('Error getting all users: ', error);
+            throw error;
+        }
+    }
+    static async getAllGTKS() {
+        try {
+            const querySnapshot = await getDocs(gtkCollection);
             return querySnapshot.docs.map((doc) => doc.data());
         } catch (error) {
             console.error('Error getting all users: ', error);

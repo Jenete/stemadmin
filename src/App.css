@@ -75,3 +75,83 @@ button {
 button:hover {
   background-color: #c82333;
 }
+/* Styling for the app container */
+.App {
+  max-width: 800px; /* Optimal reading width */
+  margin: 20px auto; /* Center the app and provide some spacing from the viewport edges */
+  padding: 20px;
+  background-color: #ffffff; /* White background to contrast against the light gray of the body */
+  border-radius: 8px; /* Soft rounded corners for a modern feel */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a slight depth */
+}
+
+/* Styling for the main header */
+.app-header {
+  text-align: center; /* Center-align the header text */
+  color: #2c3e50; /* Slightly muted blue for a touch of color */
+  padding-bottom: 20px; /* Space below the header */
+  border-bottom: 2px solid #ecf0f1; /* Light line to visually separate the header from content */
+  margin-bottom: 20px; /* Additional space below the line */
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+  .App {
+    margin: 10px; /* Less margin on smaller screens */
+    padding: 10px; /* Less padding to utilize more screen real estate */
+  }
+  .app-header {
+    font-size: 20px; /* Smaller font size for small screens */
+  }
+}
+/* Enhanced styling for the app header with color animation */
+.app-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ecf0f1;
+  margin-bottom: 20px;
+  animation: slideInFromLeft 1s ease-out forwards, colorCycle 8s infinite linear; /* Adding color cycle animation */
+}
+
+/* Superscript styling remains the same */
+.superscript {
+  font-size: 10px;
+  vertical-align: super;
+  color: #7f8c8d;
+  margin-left: 5px;
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for color cycling */
+@keyframes colorCycle {
+  0%, 100% {
+    color: #4d80b3; /* Starting color */
+  }
+  25% {
+    color: #3498db; /* Blue */
+  }
+  50% {
+    color: #9aeee3; /* Red */
+  }
+  75% {
+    color: #276c9b; /* Yellow */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    font-size: 20px;
+  }
+}

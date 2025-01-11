@@ -1,0 +1,17 @@
+.course-provider-container {
+    margin: 20px;
+  }
+  
+  .course-provider-container .faculty-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .course-provider-container .courses-display {
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,109 @@
+/* Overall styling for better aesthetics and responsiveness */
+body, html {
+  font-family: 'Arial', sans-serif; /* Ensures a consistent font across devices */
+  background-color: #f4f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Styling for the intro and main form sections */
+.intro-part,
+.my-story-part {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro-part p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Styling for the form elements */
+.get-to-know-form {
+  background-color: #fff;
+  padding: 20px;
+  margin: auto;
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.get-to-know-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+}
+
+.get-to-know-form input,
+.get-to-know-form textarea,
+.get-to-know-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.get-to-know-form textarea {
+  height: 100px; /* Provides more space for typing */
+}
+
+.get-to-know-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.get-to-know-form button:hover {
+  background-color: #45a049;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .get-to-know-form {
+    padding: 15px;
+  }
+  .intro-part p, .my-story-part p {
+    font-size: 16px;
+  }
+}
+
+/* Enhancements for checkboxes */
+.get-to-know-form div {
+  padding-left: 20px;
+}
+.get-to-know-form .subjects div{
+  display: flex;
+  flex-direction: column;}
+
+.get-to-know-form input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+/* Style for better visuals in the story part */
+.my-story-part {
+  background-color: #e8eaf6;
+}
+.my-story-part p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .get-to-know-form input[type="checkbox"] {
+    transform: scale(1.3);
+  }
+}

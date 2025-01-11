@@ -1,0 +1,27 @@
+.course-data-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4f4f9;
+    border-left: 5px solid #5c67f2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+.course-data-container:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+ .selected-course{
+    border-left: 5px solid #6df25c;
+    background-color: #e2e7d9;
+  }
+  
+  .course-data-container  .course-name {
+    color: #333;
+    font-size: 20px;
+  }
+  
+  .course-data-container  .course-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
