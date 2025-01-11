@@ -30,8 +30,10 @@ const UserProfileCard = ({ formData }) => {
       <p>
         {formData.name && `My name is ${formData.name}`}
         {formData.age && ` and I am ${getAgeAndDOB(formData.age)} years old`}
-        {formData.school && `, studying at ${formData.school}`}
-        {formData.grade && ` doing grade ${formData.grade}`}.
+        {formData.school && formData.grade !== 'Rewriting' && `, studying at ${formData.school}`}
+        {formData.grade && formData.grade !== 'Rewriting' && ` doing grade ${formData.grade}, to be tutored by STEM HUB TUTORING-AL JENETE`}.
+        {formData.school && formData.grade === 'Rewriting'  && `, studied at ${formData.school}`}
+        {formData.grade && formData.grade === 'Rewriting' && ` and this year I am ${formData.grade} with STEM HUB TUTORING-AL JENETE, why not give it another try?`}.
       </p>
       
       {formData.favoriteSubjects.length > 0 && (

@@ -19,6 +19,8 @@ const GetToKnowForm = () => {
     achievements: ''
   });
 
+  const [loadingIndicator, setLoadingIndicator] = useState('');
+
   const setSelectedCourse = (course)=>{
     if(course){
         setFormData({...formData, careerInterest: course});
@@ -46,10 +48,15 @@ const GetToKnowForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoadingIndicator('Loading...');
     const res = await userDataController.submitFormData(formData);
     if(res.success)
-    alert('Form submitted successfully!');
+    {alert('Form submitted successfully!');
+      setLoadingIndicator('Form submitted successfully!');
+      return;
+    }
   else alert('Eiish something went wrong, try again after 10 minutes please. Error:\n'+res.message);
+  setLoadingIndicator('Eiish something went wrong, try again after 10 minutes please. Error:\n'+res.message)
   };
 
   return (
@@ -59,7 +66,7 @@ const GetToKnowForm = () => {
       </section>
       <section>
           <form onSubmit={(e)=>{e?.preventDefault()}} className="get-to-know-form">
-          <label>Name<br/>
+          <label>Name & Surname<br/>
             <input type="text" name="name" value={formData.name} onChange={handleChange} />
           </label>
           <label>Birthday<br/>
@@ -69,7 +76,14 @@ const GetToKnowForm = () => {
             <input type="text" name="school" value={formData.school} onChange={handleChange} />
           </label>
           <label>Grade<br/>
-            <input type="text" name="grade" value={formData.grade} onChange={handleChange} />
+            <select name="grade" value={formData.grade} onChange={handleChange}>
+              <option defaultValue={true} disabled></option>
+              <option value={'12'} >12</option>
+              <option  value={'11'} >11</option>
+              <option  value={'10'} >10</option>
+              <option  value={'Rewriting'} >Rewriting</option>
+            </select>
+           
           </label>
           <label>Cell Number<br/>
             <input type="tel" name="cellNumber" value={formData.cellNumber} onChange={handleChange} />
@@ -85,7 +99,7 @@ const GetToKnowForm = () => {
           </label>
           <label>Favorite Subjects (Select all that apply)<br/>
             <div className='subjects'>
-              {["Math", "Science", "English", "History", "Art",'EGD'].map(subject => (
+              {["Math", "Science", 'EGD', 'Accounting', 'Life Sciences', 'Business',"Languages", 'Engineering/IT'].map(subject => (
                 <div key={subject}>
                   <input
                     type="checkbox"
@@ -111,6 +125,7 @@ const GetToKnowForm = () => {
       {formData.name &&  <section className='my-story-part'>
               <UserProfileCard formData={formData}/>
               <p>Send us a screenshot of this page please and then submit</p>
+              <p>{loadingIndicator}</p>
               <button onClick={handleSubmit}>Submit</button>
       </section>}
     </div>
